@@ -36,3 +36,6 @@ function askSomeone2(someone: Developer & Person){
 }
 
 
+function asd(){
+    
+}
