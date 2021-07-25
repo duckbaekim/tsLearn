@@ -1,3 +1,9 @@
+enum PhoneType {
+  Home = 'home',
+  Office = 'office',
+  Studio = 'studio'
+}
+
 interface PhoneNumberDictionary {
   [phone: string]: {
     num: number;
@@ -15,7 +21,7 @@ interface Contact {
 function fetchContacts() : Promise<Contact[]> {
   // TODO: 아래 변수의 타입을 지정해보세요.
   const contacts: Contact[] = [
-    {
+  {
       name: 'Tony',
       address: 'Malibu',
       phones: {
@@ -56,7 +62,6 @@ function fetchContacts() : Promise<Contact[]> {
 
 // main
 class AddressBook {
-  // TODO: 아래 변수의 타입을 지정해보세요.
   contacts: Contact[] = [];
 
   constructor() {
@@ -78,7 +83,9 @@ class AddressBook {
     return this.contacts.filter(contact => contact.address === address);
   }
 
-  findContactByPhone(phoneNumber:number, phoneType: string): Contact[] {
+  // home, office, studio 
+  
+  findContactByPhone(phoneNumber:number, phoneType: PhoneType): Contact[] {
     return this.contacts.filter(
       contact => contact.phones[phoneType].num === phoneNumber
     );
@@ -91,11 +98,11 @@ class AddressBook {
   displayListByName():string[] {
     return this.contacts.map(contact => contact.name);
   }
-
+  
+  /* ------------------------------------------------ */
   displayListByAddress():string[] {
     return this.contacts.map(contact => contact.address);
   }
-  /* ------------------------------------------------ */
 }
 
 new AddressBook();

@@ -15,7 +15,7 @@ interface Dropdown<T>{
     value : T;
     selected: boolean;
 }
-const obj: Dropdown<number> = {value: 1, selected:false};
+const testObj: Dropdown<number> = {value: 1, selected:false};
 
 // 제네릭의 타입 제한
 function logTextLength<T>(text:T[]): T[]{
