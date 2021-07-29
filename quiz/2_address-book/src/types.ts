@@ -16,4 +16,4 @@ export enum PhoneType {
     phones: PhoneNumberDictionary;
   }
   
-  // export {PhoneType, Contact}
+  // export {PhoneType, Contact}; 여러개일떈 이렇게 하자

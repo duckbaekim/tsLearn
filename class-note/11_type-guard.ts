@@ -32,6 +32,7 @@ if(isDeveloper(tony)){
 }
 if(!isDeveloper(tony)){
     console.log(tony.age);
+    
 }
 
 

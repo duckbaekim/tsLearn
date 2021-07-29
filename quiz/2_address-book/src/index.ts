@@ -1,4 +1,5 @@
-import {Contact, PhoneType,} from './types'
+ import {Contact, PhoneType,} from './types' //모듈화로 변경
+
 // api
 // TODO: 아래 함수의 반환 타입을 지정해보세요.
 function fetchContacts() : Promise<Contact[]> {
